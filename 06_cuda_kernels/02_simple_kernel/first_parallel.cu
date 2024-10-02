@@ -10,10 +10,10 @@ __global__ void GPUFunction() {
 
 int main() {
   // function to run on the cpu
-  CPUFunction();
+  //CPUFunction();
 
   // function to run on the gpu
-  GPUFunction<<<1, 1>>>();
+  GPUFunction<<<1, 6>>>();
   
   // kernel execution is asynchronous so sync on its completion
   cudaDeviceSynchronize();

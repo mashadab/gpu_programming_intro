@@ -15,6 +15,8 @@ int main() {
   // function to run on the gpu
   GPUFunction<<<1, 1>>>();
   
+  // function to run on the cpu
+  CPUFunction();
   // kernel execution is asynchronous so sync on its completion
-  cudaDeviceSynchronize();
+  //cudaDeviceSynchronize();
 }
